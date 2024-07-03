@@ -6,7 +6,7 @@ export const Container = styled.div`
     border-radius: 16px;
     flex: 1;
 
-    header {
+    > header {
         padding: 8px;
         font-size: 14px;
         gap: 8px;

@@ -4,7 +4,8 @@ import { Container } from "./styles"
 const boards = [
     {
         id: 1,
-        name: 'Fila de espera',
+        name: 'WAITING',
+        label: 'Fila de espera',
         icon: '🕚',
         quantity: 1,
         orders: [
@@ -17,20 +18,17 @@ const boards = [
     },
     {
         id: 2,
-        name: 'Em preparação',
+        name: 'IN_PRODUCTION',
+        label: 'Em preparação',
         icon: '👩‍🍳',
         quantity: 1,
         orders: [
-            {
-                id: '2',
-                table: 'Mesa 4',
-                quantity: 2
-            }
         ]
     },
     {
         id: 3,
-        name: 'Pronto!',
+        name: 'DONE',
+        label: 'Pronto!',
         icon: '✅',
         quantity: 1,
         orders: [
@@ -38,6 +36,11 @@ const boards = [
                 id: '3',
                 table: 'Mesa 1',
                 quantity: 2
+            },
+            {
+                id: '4',
+                table: 'Mesa 6',
+                quantity: 9
             }
         ]
     }
@@ -50,7 +53,7 @@ const Orders = () => {
                 <OrdersBoard
                     key={board.id}
                     icon={board.icon}
-                    title={board.name}
+                    title={board.label}
                     quantity={board.quantity}
                     orders={board.orders}
                 />
